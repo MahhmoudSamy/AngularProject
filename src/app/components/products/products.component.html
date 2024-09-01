@@ -1,0 +1,12 @@
+<!-- products.component.html -->
+<div class="products">
+    <h2>Products</h2>
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchTerm" (input)="onSearch()">
+    <div *ngFor="let product of filteredProducts">
+      <img [src]="product.image" alt="Product Image">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+      <button (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+  

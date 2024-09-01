@@ -1,0 +1,10 @@
+<!-- admin-login.component.html -->
+<div class="admin-login">
+    <h2>Admin Login</h2>
+    <form (ngSubmit)="onAdminLogin()">
+      <input type="email" placeholder="Email" [(ngModel)]="adminEmail" name="email" required>
+      <input type="password" placeholder="Password" [(ngModel)]="adminPassword" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  

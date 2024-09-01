@@ -1,0 +1,16 @@
+<!-- admin-orders.component.html -->
+<div class="admin-orders">
+    <h2>Manage Orders</h2>
+    <div *ngFor="let order of orders">
+      <p><strong>User:</strong> {{ order.username }}</p>
+      <p><strong>Date:</strong> {{ order.date | date }}</p>
+      <p><strong>Total Price:</strong> {{ order.totalPrice | currency }}</p>
+      <p><strong>Products:</strong> {{ order.productTitles.join(', ') }}</p>
+      <select [(ngModel)]="order.status" (change)="modifyOrderState(order)">
+        <option value="pending">Pending</option>
+        <option value="accepted">Accepted</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+  </div>
+  

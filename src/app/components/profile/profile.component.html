@@ -1,0 +1,22 @@
+<!-- profile.component.html -->
+<div class="profile">
+    <h2>Profile</h2>
+    <div>
+      <img [src]="user.image" alt="User Image">
+      <p>Username: {{ user.username }}</p>
+      <p>Email: {{ user.email }}</p>
+      <p>Gender: {{ user.gender }}</p>
+      <button (click)="editProfile()">Edit Profile</button>
+    </div>
+  
+    <div>
+      <h3>Orders</h3>
+      <ul>
+        <li *ngFor="let order of orders">
+          {{ order.productName }} - {{ order.status }}
+          <button *ngIf="order.status === 'pending'" (click)="cancelOrder(order.id)">Cancel</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

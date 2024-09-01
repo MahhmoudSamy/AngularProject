@@ -1,0 +1,14 @@
+<!-- home.component.html -->
+<div class="home">
+    <h1>Welcome to Hand Watches Store</h1>
+    <div class="promotions">
+      <h2>Promotions</h2>
+      <!-- Loop through promotions here -->
+      <div *ngFor="let promotion of promotions">
+        <img [src]="promotion.image" alt="Promotion Image">
+        <h3>{{ promotion.title }}</h3>
+        <p>{{ promotion.description }}</p>
+      </div>
+    </div>
+  </div>
+  

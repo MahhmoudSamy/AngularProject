@@ -1,0 +1,12 @@
+<!-- cart.component.html -->
+<div class="cart">
+    <h2>Your Cart</h2>
+    <div *ngFor="let product of cart">
+      <img [src]="product.image" alt="Product Image">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+      <button (click)="removeFromCart(product)">Remove</button>
+    </div>
+    <button (click)="checkout()">Checkout</button>
+  </div>
+  

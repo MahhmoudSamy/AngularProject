@@ -1,0 +1,27 @@
+<!-- admin-products.component.html -->
+<div class="admin-products">
+    <h2>Manage Products</h2>
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchTerm" (input)="onSearch()">
+  
+    <!-- Product List -->
+    <div *ngFor="let product of filteredProducts">
+      <img [src]="product.image" alt="Product Image">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+      <p>{{ product.details }}</p>
+      <button (click)="editProduct(product)">Edit</button>
+      <button (click)="deleteProduct(product.id)">Delete</button>
+    </div>
+  
+    <!-- Product Form for Create/Update -->
+    <h3 *ngIf="isEditMode">Edit Product</h3>
+    <h3 *ngIf="!isEditMode">Add Product</h3>
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Title" [(ngModel)]="selectedProduct.name" name="name" required>
+      <input type="text" placeholder="Details" [(ngModel)]="selectedProduct.details" name="details" required>
+      <input type="number" placeholder="Price" [(ngModel)]="selectedProduct.price" name="price" required>
+      <input type="file" (change)="onFileSelected($event)" name="image">
+      <button type="submit">{{ isEditMode ? 'Update' : 'Create' }}</button>
+    </form>
+  </div>
+  

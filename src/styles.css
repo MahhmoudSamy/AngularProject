@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles (styles.css) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .register, .admin-products, .admin-orders {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .register input, .register select, .register button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

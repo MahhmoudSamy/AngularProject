@@ -1,0 +1,10 @@
+/* cart.component.css */
+.cart {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .cart div {
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,13 @@
+/* admin-orders.component.css */
+.admin-orders {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .admin-orders div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  

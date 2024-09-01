@@ -1,0 +1,20 @@
+/* home.component.css */
+.home {
+    text-align: center;
+  }
+  
+  .promotions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .promotions div {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+  }
+  
